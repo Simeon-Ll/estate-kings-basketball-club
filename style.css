@@ -46,6 +46,10 @@ body{
 
 .wrapper > *{
   margin-top: 5px;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 40px 20px;
+  background-color: var(--Bball);
 }
 
 nav{
@@ -95,8 +99,6 @@ nav a:hover{
 main{
   width: 100%;
   height: 80vh;
-  border-radius: 10px;
-  border: 2px solid white;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -155,10 +157,7 @@ main a p{
 
 .achievements{
   width: 100%;
-  padding: 40px 20px;
   background-color: #bb3a07;
-  border-radius: 10px;
-  border: 2px solid white;
   display: flex;
   justify-content: center;
 }
@@ -176,17 +175,18 @@ main a p{
 
 .about{
   background-color: var(--Bball) ;
-  border: 2px solid white;
-  border-radius: 10px;
-  margin-top: 5px;
-  padding: 40px 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  
+ 
 
 }
 
-.about h1{
+.history{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.history h1, .team h1{
   width: fit-content;
   padding: 5px 10px;
   text-align: center;
@@ -195,22 +195,112 @@ main a p{
   margin-bottom: 10px;
 }
 
-.about img{
+.history img{
   display: none;
 }
 
-.about p{
+.history p{
   font-weight: 600;
   width: 80%;
 }
 
-/* .achievements{
-  width: 39%;
-  height: ;
-  border-radius: 10px;
-  border: 2px solid white;
+.team{
+  position: relative;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.team .image{
+  width: 500px;
+  height: 350px;
+  border: 3px solid;
+  margin-bottom: 20px;
+  text-align: center;
+  padding: 120px 0;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.slides{
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text{
+  font-size: 1.2em;
+  padding: 10px 20px;
+  border: 3px solid;
+  box-shadow: 5px 5px;
+  width: fit-content;
+  text-align: center;
+  font-weight: 700;
+} 
+
+.dot{
+  cursor: pointer;
+  height: 10px;
+  width: 10px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block; 
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover{
+  background-color: #717171;
+}
+
+.fade{
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade{
+  from{opacity: .4}
+  to {opacity: 1}
+}
+
+
+footer{
   background-color: var(--Bball);
-} */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  
+}
+
+footer .copyright{
+  text-align: center;
+  font-weight: 600;
+}
+
+footer ul{
+  display: flex;
+  width: 120px;
+  justify-content: space-between;
+  margin-top: 10px;
+ 
+}
+
+footer ul a{
+  color: black;
+  transition: color 500ms;
+}
+
+footer ul a:hover{
+  color: white;
+}
+
+footer ul .icons{
+  width: 20px;
+  height: 20px;
+}
 
 
 
@@ -223,11 +313,11 @@ main a p{
   }
 
   nav ul{
-    width: 300px;
+    width: 270px;
   }
   
   nav a{
-    font-size: 1em;
+    font-size: 0.8em;
     width: 70px;
   }
 
@@ -245,14 +335,12 @@ main a p{
     font-size: 1em;
   }
 
-  section{
-    flex-direction: column-reverse;
-  }
+ 
 
-  .about{
+  .history{
     width: 100%;
   }
-  .about img{
+  .history img{
     display: block;
     width: calc(100% - 40px);
     border: 3px solid ;
@@ -260,7 +348,7 @@ main a p{
     
   }
 
-  .about h1{
+  .history h1, .team h1{
     font-size: 1.5em;
   }
 
