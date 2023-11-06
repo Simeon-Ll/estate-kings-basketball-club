@@ -1,12 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
 @font-face {
   font-family: mont;
   src: url(/fonts/Montserrat-Regular.ttf);
 }
 
-@font-face {
-  font-family: poppins;
-  src: url(fonts/Poppins-ExtraBold.ttf);
-}
+
+
+
 
 *{
   padding: 0;
@@ -199,9 +200,6 @@ main a p{
 
 .about{
   background-color: var(--Bball) ;
-  
- 
-
 }
 
 .history, .mission{
